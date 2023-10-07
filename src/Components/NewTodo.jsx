@@ -21,6 +21,7 @@ const NewTodo = ({ setTodos, todos }) => {
 
 	return (
 		<>
+			
 			<form onSubmit={formik.handleSubmit}>
 				<input type="text" name="" id="task" placeholder="New Todo"
 					{ ...formik.getFieldProps('task') } />
