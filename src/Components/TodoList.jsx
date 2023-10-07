@@ -4,9 +4,11 @@ const TodoList = ({ todos, updateTodo }) => {
 	console.log(todos)
 	return (
 		<>
-			{ todos.map((todo) => {
-				return <Todo key={todo.id} todo={todo} updateTodo={updateTodo} />
-			}) }
+			<div className="my-[80px]">
+				{ todos.map((todo) => {
+					return <Todo key={todo.id} todo={todo} updateTodo={updateTodo} />
+				}) }
+			</div>
 		</>
 	)
 }

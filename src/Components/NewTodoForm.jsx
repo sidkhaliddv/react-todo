@@ -4,11 +4,14 @@ import { Formik, Field, Form, ErrorMessage, useField } from 'formik';
 const TextInput = (({ ...props }) => {
 	const [field, meta] = useField(props);
 	return (
-		<>
-			<input type="text" {...field}/>
-			{ meta.touched && meta.error ? (
-				<div>{ meta.error }</div>
-			) : null }
+		<>	
+			<div className='w-full md:w-3/6'>
+				<input type="text" className='rounded border focus:outline-none py-2 w-full' {...field}
+					placeholder='Enter new todo here...'/>
+				{ meta.touched && meta.error ? (
+					<div className='text-rose-600'>*{ meta.error }</div>
+				) : null }
+			</div>
 		</>
 	)
 })
@@ -37,15 +40,18 @@ const NewTodoForm = ({ addTodo }) => {
 							completed: false,
 						}]
 					})
+					values.task=''
 					setSubmitting(false);
 				}}>
-					<Form>
+					<Form className='flex flex-wrap justify-center'>
 						<TextInput
 							name="task"
 							type="text"
 							placeholder="New task"
 						/>
-						<button type='submit'>Submit</button>
+						<div className='w-full md:w-1/6'>
+							<button type='submit' className='border p-2 rounded bg-blue-500 text-white w-full'>Submit</button>
+						</div>
 					</Form>
 			</Formik>
 		</>

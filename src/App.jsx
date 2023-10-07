@@ -9,8 +9,11 @@ function App() {
 
   return (
     <>
-      <NewTodoForm addTodo={setTodos} />
-      <TodoList todos = { todos } updateTodo = { setTodos } />
+      <div className=''>
+        <div className='m-5'></div>
+        <NewTodoForm addTodo={setTodos} />
+        <TodoList todos = { todos } updateTodo = { setTodos } />
+      </div>
     </>
   )
 }
