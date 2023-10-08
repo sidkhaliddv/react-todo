@@ -9,10 +9,13 @@ function App() {
 
   return (
     <>
+      <h1 className='text-5xl text-center'><span className='text-blue-500'>TODO</span> APP</h1>
       <div className=''>
         <div className='m-5'></div>
         <NewTodoForm addTodo={setTodos} />
-        <TodoList todos = { todos } updateTodo = { setTodos } />
+        <div className='scroll-smooth'>
+          <TodoList todos = { todos } updateTodo = { setTodos } />
+        </div>
       </div>
     </>
   )

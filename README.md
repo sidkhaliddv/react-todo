@@ -1,5 +1,9 @@
 # React + Vite
 
+A todo App in react where user can write his/her todos and save and delete them.
+
+The app uses formik for new todo form
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
