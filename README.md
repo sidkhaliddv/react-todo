@@ -1,6 +1,8 @@
 # React + Vite
 
 A todo App in react where user can write his/her todos and save and delete them.
+![image](https://github.com/sidkhaliddv/react-todo/assets/126388601/79b79c41-b034-45c1-83f8-d792b787dc43)
+
 
 The app uses formik for new todo form
 
